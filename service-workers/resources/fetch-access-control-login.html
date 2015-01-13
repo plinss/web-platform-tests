@@ -8,7 +8,7 @@ window.addEventListener("message", function(evt) {
         port.postMessage({msg: 'LOGIN FINISHED'});
       }, false);
     xhr.open('GET',
-             './fetch-access-control.php?Auth',
+             './fetch-access-control.py?Auth',
              true,
              evt.data.username, evt.data.password);
     xhr.send();

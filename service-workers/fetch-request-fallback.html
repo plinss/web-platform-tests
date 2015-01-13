@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <title>Service Worker: the fallback behavior of FetchEvent</title>
-<script src="../resources/testharness.js"></script>
-<script src="../resources/testharnessreport.js"></script>
+<script src="/resources/testharness.js"></script>
+<script src="/resources/testharnessreport.js"></script>
 <script src="resources/test-helpers.js?pipe=sub"></script>
 <script>
 var expected_urls = [];
@@ -37,9 +37,9 @@ async_test(function(t) {
     var SCRIPT = 'resources/fetch-request-fallback-worker.js';
     var host_info = get_host_info();
     var BASE_URL = host_info['HTTP_ORIGIN'] +
-                   '/serviceworker/resources/fetch-access-control.php?';
+                   '/serviceworker/resources/fetch-access-control.py?';
     var OTHER_BASE_URL = host_info['HTTP_REMOTE_ORIGIN'] +
-                         '/serviceworker/resources/fetch-access-control.php?';
+                         '/serviceworker/resources/fetch-access-control.py?';
     var REDIRECT_URL = host_info['HTTP_ORIGIN'] +
                        '/serviceworker/resources/redirect.php?Redirect=';
     var frame;

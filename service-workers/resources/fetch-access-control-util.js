@@ -1,12 +1,12 @@
 var SCOPE = 'resources/fetch-access-control-iframe.html';
-var BASE_URL = 'http://127.0.0.1:8000/serviceworker/resources/fetch-access-control.php?';
-var OTHER_BASE_URL = 'http://localhost:8000/serviceworker/resources/fetch-access-control.php?';
-var REDIRECT_URL = 'http://127.0.0.1:8000/serviceworker/resources/redirect.php?Redirect=';
-var OTHER_REDIRECT_URL = 'http://localhost:8000/serviceworker/resources/redirect.php?Redirect=';
-var REDIRECT_LOOP_URL = 'http://127.0.0.1:8000/serviceworker/resources/redirect-loop.php?Redirect=';
-var IFRAME_URL = 'http://127.0.0.1:8000/serviceworker/resources/fetch-access-control-iframe.html';
-var WORKER_URL = 'http://127.0.0.1:8000/serviceworker/resources/fetch-access-control-worker.js';
-var IFRAME_ORIGIN = 'http://127.0.0.1:8000';
+var BASE_URL = 'http://{{host}}:{{ports[http][0]}}/serviceworker/resources/fetch-access-control.py?';
+var OTHER_BASE_URL = 'http://{{domains[www]}}:{{ports[http][0]}}/serviceworker/resources/fetch-access-control.php?';
+var REDIRECT_URL = 'http://{{host}}:{{ports[http][0]}}/serviceworker/resources/redirect.php?Redirect=';
+var OTHER_REDIRECT_URL = 'http://{{domains[www]}}:{{ports[http][0]}}/serviceworker/resources/redirect.php?Redirect=';
+var REDIRECT_LOOP_URL = 'http://{{host}}:{{ports[http][0]}}/serviceworker/resources/redirect-loop.php?Redirect=';
+var IFRAME_URL = 'http://{{host}}:{{ports[http][0]}}/serviceworker/resources/fetch-access-control-iframe.html';
+var WORKER_URL = 'http://{{host}}:{{ports[http][0]}}/serviceworker/resources/fetch-access-control-worker.js';
+var IFRAME_ORIGIN = 'http://{{host}}:{{ports[http][0]}}';
 
 // Functions to check the result from the ServiceWorker.
 var checkFetchResult = function(expected, url, data) {
@@ -124,10 +124,10 @@ var authCheck2 = checkJsonpAuth.bind(this, 'username2', 'password2', 'cookie2');
 function executeTests(test, test_targets) {
   test.step(function() {
       var login1 =
-        test_login(test, 'http://127.0.0.1:8000',
+        test_login(test, 'http://{{host}}:{{ports[http][0]}}',
                    'username1', 'password1', 'cookie1');
       var login2 =
-        test_login(test, 'http://localhost:8000',
+        test_login(test, 'http://{{domains[www]}}:{{ports[http][0]}}',
                    'username2', 'password2', 'cookie2');
       var workerScript = 'resources/fetch-access-control-worker.js';
       var worker = undefined;
