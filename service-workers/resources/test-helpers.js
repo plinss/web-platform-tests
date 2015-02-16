@@ -209,3 +209,15 @@ function test_login(test, origin, username, password, cookie) {
           }));
     });
 }
+
+function assert_promise_rejects(promise, code, description) {
+  return promise.then(
+    function() {
+      throw 'assert_promise_rejects: ' + description + ' Promise did not reject.';
+    },
+    function(e) {
+      if (code !== undefined) {
+        assert_throws(code, function() { throw e; }, description);
+      }
+    });
+}
