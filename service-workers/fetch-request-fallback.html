@@ -41,7 +41,7 @@ async_test(function(t) {
     var OTHER_BASE_URL = host_info['HTTP_REMOTE_ORIGIN'] +
                          '/serviceworker/resources/fetch-access-control.py?';
     var REDIRECT_URL = host_info['HTTP_ORIGIN'] +
-                       '/serviceworker/resources/redirect.php?Redirect=';
+                       '/serviceworker/resources/redirect.py?Redirect=';
     var frame;
     var worker;
     service_worker_unregister_and_register(t, SCRIPT, SCOPE)

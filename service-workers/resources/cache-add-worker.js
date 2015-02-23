@@ -1,5 +1,5 @@
 importScripts('worker-testharness.js');
-importScripts('/resources/testharness-helpers.js');
+importScripts('test-helpers.js');
 
 cache_test(function(cache) {
     return assert_promise_rejects(

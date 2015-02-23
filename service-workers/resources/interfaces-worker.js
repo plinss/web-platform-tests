@@ -1,6 +1,6 @@
 importScripts('interfaces.js');
 importScripts('worker-testharness.js');
-importScripts('/resources/testharness-helpers.js');
+importScripts('test-helpers.js');
 
 var EVENT_HANDLER = 'object';
 

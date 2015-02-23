@@ -1,5 +1,5 @@
 importScripts('worker-testharness.js');
-importScripts('/resources/testharness-helpers.js');
+importScripts('test-helpers.js');
 importScripts('override_assert_object_equals.js');
 
 var test_url = 'https://example.com/foo';

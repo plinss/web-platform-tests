@@ -1,5 +1,5 @@
 importScripts('worker-testharness.js');
-importScripts('../../resources/testharness-helpers.js');
+importScripts('test-helpers.js');
 
 promise_test(function(t) {
     var cache_name = 'cache-storage/foo';

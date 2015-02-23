@@ -1,5 +1,5 @@
 importScripts('worker-testharness.js');
-importScripts('/resources/testharness-helpers.js');
+importScripts('test-helpers.js');
 importScripts('override_assert_object_equals.js');
 
 // A set of Request/Response pairs to be used with prepopulated_cache_test().
