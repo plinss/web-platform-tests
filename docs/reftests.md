@@ -122,7 +122,7 @@ This test verifies that a right-to-left rendering of **SAW** within a
 The reference file must look exactly like the test file,
 except that the code behind it is different.
 
-* All metadata is removed.
+* Sepcification links and assertion metadata are removed.
 * The ```title``` need not match.
 * The markup that created the actual test data is
   different: here, the same effect is created with
